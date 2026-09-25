@@ -30,25 +30,42 @@ public class Reserva {
     public String getCodigoReserva() {
         return codigo;
     }
-
+    public void setCodigoReserva(){
+        this.codigoReserva = codigoReserva;
+    }
     public String getFecha() {
         return fecha;
+    }
+    public void setFecha(){
+        this.fecha = fecha;
     }
 
     public byte getNumeroNoches() {
         return numeroNoches;
     }
+    public void setNumeroNoches(){
+        this.numeroNoches = numeroNoches;
+    }
 
     public byte getCantidadHuespedes() {
         return cantidadHuespedes;
+    }
+    public void setCantidadHuespedes(){
+        this.cantidadHuespedes = cantidadHuespedes;
     }
 
     public String getMetodoPago() {
         return metodoPago;
     }
+    public void setMetodoPago(){
+        this.metodoPago = metodoPago;
+    }
 
     public String getValorTotal() {
         return valorTotal;
+    }
+    public void setValorTotal(){
+        this.valorTotal = valorTotal;
     }
 
 
