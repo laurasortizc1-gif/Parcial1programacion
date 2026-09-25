@@ -23,39 +23,40 @@ public class Habitacion {
 
         listaReservas = new ArrayList<>();
     }
+    public void setNumeroHabitacion(){
+        this.numeroHabitacion = numeroHabitacion;
+    }
 
     public String getNumeroHabitacion() {
         return numeroHabitacion;
     }
-    public void setNumeroHabitacion(){
-        this.numeroHabitacion = numeroHabitacion;
+     public void setTipoHabitacion(){
+        this.tipoHabitacion = tipoHabitacion;
     }
 
     public String getTipoHabitacion() {
         return tipoHabitacion;
     }
-    public void setTipoHabitacion(){
-        this.tipoHabitacion = tipoHabitacion;
+    public void setCapacidadPersonas(){
+        this.capacidadPersonas = capacidadPersonas;
     }
 
     public byte getCapacidadPersonas() {
         return capacidadPersonas;
     }
-    public void setCapacidadPersonas(){
-        this.capacidadPersonas = capacidadPersonas;
+    public void setPrecioPorNoche(){
+        this.precioPorNoche = precioPorNoche;
     }
 
     public String getPrecioPorNoche() {
         return precioNoche;
     }
-    public void setPrecioPorNoche(){
-        this.precioPorNoche = precioPorNoche;
+     public void setListaReservas(ArrayList<Reserva>){
+        this.codigoReserva = codigoReserva;
     }
 
     public ArrayList<Reserva> getListaReservas() {
         return listaReservas;
     }
-    public void setListaReservas(ArrayList<Reserva>){
-        this.codigoReserva = codigoReserva;
-    }
+
 }
