@@ -1,0 +1,55 @@
+package co.edu.uniquindio.poo.model;
+
+import java.util.ArrayList;
+
+public class Reserva {
+
+    private String codigo;
+    private String fecha;
+    private byte numeroNoches;
+    private byte cantidadHuespedes;
+    private String metodoPago;
+    private String valorTotal;
+
+    private Reserva ownedbyHotel;
+    private Huesped[] listaHuespedes;
+
+    public Reserva(String codigoReserva, String fecha,
+                   byte numeroNoches, byte cantidadHuespedes,
+                   String metodoPago, String valorTotal) {
+
+        this.codigo = codigoReserva;
+        this.fecha = fecha;
+        this.numeroNoches = numeroNoches;
+        this.cantidadHuespedes = cantidadHuespedes;
+        this.metodoPago = metodoPago;
+        this.valorTotal = valorTotal;
+
+    }
+
+    public String getCodigoReserva() {
+        return codigo;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public byte getNumeroNoches() {
+        return numeroNoches;
+    }
+
+    public byte getCantidadHuespedes() {
+        return cantidadHuespedes;
+    }
+
+    public String getMetodoPago() {
+        return metodoPago;
+    }
+
+    public String getValorTotal() {
+        return valorTotal;
+    }
+
+
+}
