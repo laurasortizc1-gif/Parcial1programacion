@@ -23,10 +23,10 @@ public class Main {
         do {
             opcion = Integer.valueOf(JOptionPane.showInputDialog(null,
                     "Por favor selecciones una opcion :\n ---Menu--\n" +
-                            "1. Consultar huesped\n" +
-                            " 2. Ver disponibilidad de habitaciones\n" +
-                            " 3. Mostrar matriz de ocupación semanal\n" +
-                            " 4. verificar reserva especial\n" +
+                            "1. Registrar reserva\n" +
+                            " 2. Registrar huesped\n" +
+                            " 3. Consultar huesped\n" +
+                            " 4. Identificar reserva especial\n" +
                             " 5. Ver ingresos del hotel\n" +
                             ""));
 
@@ -41,7 +41,7 @@ public class Main {
                     consultarHuesped(hotel);
                     break;
                 case 4:
-
+                    identificarReservaEspecial(hotel);
                     break;
                 case 5:
 
@@ -94,11 +94,16 @@ public class Main {
             JOptionPane.showMessageDialog(null, "Huesped:");
         } else JOptionPane.showMessageDialog(null, "El estudiante con la identificacion " + telefono + " no existe");
     }
+    private static void identificarReservaEspecial (Hotel hotel){
+        String codigoReserva= JOptionPane.showInputDialog(null, "Por favor ingrese el codigo de la reserva.");
+        int numeroCodigo= Integer.valueOf(codigoReserva);
+         int invertido=0;
+         for(int i=numeroCodigo; i>0; i/=10){
+             int ultimoNumero = i%10;
+             invertido+= invertido*10+ultimoNumero;
+         }
+         if(numeroCodigo==invertido){
+             JOptionPane.showMessageDialog(null, "Su reserva es especial.");
+         }else JOptionPane.showMessageDialog(null, "Su reserva no es especial.");
 
-    private static void disponibilidadHabitaciones(Hotel hotel) {
-        String identificacion = JOptionPane.showInputDialog(null,
-                "Por favor ingresar la indentificaion del estudiante que desea buscar");
-
-
-    }
 }
